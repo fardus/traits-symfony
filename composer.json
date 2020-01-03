@@ -1,0 +1,29 @@
+{
+    "name": "fardus/traits-symfony",
+    "description": "classes traits for symfony",
+    "keywords": [
+        "traits",
+        "classes",
+        "entity",
+        "manager",
+        "tools",
+        "symfony"
+    ],
+    "homepage": "https://github.com/fardus/traits-symfony",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hamada Sidi fahari",
+            "email": "h.fahari@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/process": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fardus\\Traits\\Symfony\\": "src"
+        }
+    }
+}
