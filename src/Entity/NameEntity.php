@@ -15,7 +15,7 @@ trait NameEntity
 
     /**
      * @param string $name
-     * @return NameEntity
+     * @return static
      */
     public function setName( $name )
     {

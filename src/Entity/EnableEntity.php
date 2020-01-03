@@ -17,7 +17,7 @@ trait EnableEntity
      * @param bool $enable
      * @return static
      */
-    public function setEnable( $enable )
+    public function setEnable( $enable ): self
     {
         $this->enable = $enable;
         return $this;
