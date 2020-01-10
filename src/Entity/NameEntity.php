@@ -2,6 +2,8 @@
 
 namespace Fardus\Traits\Symfony\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * trait NameEntity
  * @package Fardus\Traits\Symfony\Entity
@@ -9,6 +11,7 @@ namespace Fardus\Traits\Symfony\Entity;
 trait NameEntity
 {
     /**
+     * @Assert\NotBlank()
      * @var string
      */
     protected $name;
@@ -17,7 +20,7 @@ trait NameEntity
      * @param string $name
      * @return static
      */
-    public function setName( $name )
+    public function setName( $name ): self
     {
         $this->name = $name;
         return $this;
@@ -26,7 +29,7 @@ trait NameEntity
     /**
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
