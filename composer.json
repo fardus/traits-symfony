@@ -18,7 +18,9 @@
         }
     ],
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.1",
+        "symfony/validator": "*",
+        "doctrine/annotations" : "*"
     },
     "autoload": {
         "psr-4": {
