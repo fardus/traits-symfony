@@ -2,6 +2,8 @@
 
 namespace Fardus\Traits\Symfony\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * trait EnableEntity
  * @package Fardus\Traits\Symfony\Entity
@@ -10,6 +12,7 @@ trait EnableEntity
 {
     /**
      * @var bool
+     * @ORM\Column(type="boolean")
      */
     protected $enable;
 

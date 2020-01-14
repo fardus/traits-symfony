@@ -2,6 +2,8 @@
 
 namespace Fardus\Traits\Symfony\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * trait CommentEntity
  * @package Fardus\Traits\Symfony\Entity
@@ -9,6 +11,7 @@ namespace Fardus\Traits\Symfony\Entity;
 trait CommentEntity
 {
     /**
+     * @ORM\Column(type="string", nullable=true)
      * @var string
      */
     protected $comment;
