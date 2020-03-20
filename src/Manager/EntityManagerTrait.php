@@ -2,7 +2,7 @@
 
 namespace Fardus\Traits\Symfony\Manager;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 /**
  * Trait EntityManagerTrait
@@ -11,16 +11,16 @@ use Doctrine\ORM\EntityManager;
 trait EntityManagerTrait
 {
     /**
-     * @var EntityManager
+     * @var EntityManagerInterface
      */
     private $entityManager;
 
     /**
      * @required
-     * @param EntityManager $entityManager
+     * @param EntityManagerInterface $entityManager
      * @return static
      */
-    public function setEntityManager( EntityManager $entityManager ): self
+    public function setEntityManager( EntityManagerInterface $entityManager ): self
     {
         $this->entityManager = $entityManager;
         return $this;
@@ -29,7 +29,7 @@ trait EntityManagerTrait
     /**
      * @return EntityManager
      */
-    public function getEntityManager(): EntityManager
+    public function getEntityManager(): EntityManagerInterface
     {
         return $this->entityManager;
     }
