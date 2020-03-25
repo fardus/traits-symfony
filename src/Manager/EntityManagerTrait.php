@@ -13,7 +13,7 @@ trait EntityManagerTrait
     /**
      * @var EntityManagerInterface
      */
-    private $entityManager;
+    protected $entityManager;
 
     /**
      * @required

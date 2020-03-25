@@ -22,7 +22,7 @@ trait NameEntity
      * @param string $name
      * @return static
      */
-    public function setName( $name ): self
+    public function setName( ?string $name ): self
     {
         $this->name = $name;
         return $this;
