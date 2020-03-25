@@ -13,7 +13,7 @@ trait LoggerTrait
     /**
      * @var LoggerInterface
      */
-    private $logger;
+    protected $logger;
 
     /**
      * @required

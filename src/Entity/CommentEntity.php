@@ -20,7 +20,7 @@ trait CommentEntity
      * @param string $comment
      * @return static
      */
-    public function setComment( ?string $comment ) : self
+    public function setComment( ?string $comment) : self
     {
         $this->comment = $comment;
         return $this;

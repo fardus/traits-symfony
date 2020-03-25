@@ -21,7 +21,7 @@ trait SerializerTrait
      * @param SerializerInterface $serializer
      * @return static
      */
-    public function setSerializer(SerializerInterface $serializer)
+    public function setSerializer(SerializerInterface $serializer) : self
     {
         $this->serializer = $serializer;
         return $this;

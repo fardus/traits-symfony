@@ -20,7 +20,7 @@ trait DescriptionEntity
      * @param string $description
      * @return static
      */
-    public function setDescription( $description )
+    public function setDescription(?string $description )
     {
         $this->description = $description;
         return $this;
