@@ -1,6 +1,8 @@
 <?php
 
-namespace Fardus\Traits\Symfony\Model;
+namespace Fardus\Traits\Symfony\Entity;
+
+use Fardus\Traits\Symfony\Accessors\EmailAccessorsTrait;
 
 /**
  * trait EmailEntity

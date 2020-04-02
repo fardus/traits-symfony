@@ -3,6 +3,7 @@
 namespace Fardus\Traits\Symfony\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Fardus\Traits\Symfony\Accessors\EnableAccessorsTrait;
 
 /**
  * trait EnableEntity
@@ -10,28 +11,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 trait EnableEntity
 {
+    use EnableAccessorsTrait;
+
     /**
      * @var bool
      * @ORM\Column(type="boolean")
      */
     protected $enable;
-
-    /**
-     * @param bool $enable
-     * @return static
-     */
-    public function setEnable(bool $enable ): self
-    {
-        $this->enable = $enable;
-        return $this;
-    }
-
-    /**
-     * @return bool
-     */
-    public function getEnable() : bool
-    {
-        return $this->enable;
-    }
-
 }
