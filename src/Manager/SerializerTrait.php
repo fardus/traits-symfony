@@ -2,7 +2,7 @@
 
 namespace Fardus\Traits\Symfony\Manager;
 
-Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Serializer\SerializerInterface;
 
 /**
  * Trait SerializerTrait
