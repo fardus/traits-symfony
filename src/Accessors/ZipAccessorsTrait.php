@@ -16,7 +16,7 @@ trait ZipAccessorsTrait
     /**
      * @return string
      */
-    public function getZip(): string
+    public function getZip(): ?string
     {
         return $this->zip;
     }
