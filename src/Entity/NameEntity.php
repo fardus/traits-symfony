@@ -13,11 +13,11 @@ use Fardus\Traits\Symfony\Accessors\NameAccessorsTrait;
 trait NameEntity
 {
     use NameAccessorsTrait;
-    
+
     /**
      * @Assert\NotBlank()
      * @ORM\Column(type="string", nullable=true)
      * @var string
      */
-    protected $name;
+    protected $name = null;
 }
