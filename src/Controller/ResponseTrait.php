@@ -12,7 +12,7 @@ trait ResponseTrait
     public function jsonError(\Exception $exception)
     {
         $error =['error' => $exception->getMessage() ];
-        if ($this->get('kernel.debug')) {
+        if ($this->getParameter('kernel.debug')) {
             $error['traces'] = $exception->getTrace();
         }
         $this->logger->error(__FUNCTION__, compact('exception', 'error'));
