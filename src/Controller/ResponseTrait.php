@@ -9,13 +9,16 @@ trait ResponseTrait
 {
     use LoggerTrait;
 
-    public function jsonError(\Exception $exception)
+    public function jsonError(\Exception $exception, bool $throw = false)
     {
-        $error =['error' => $exception->getMessage() ];
+        $error = ['error' => $exception->getMessage() ];
         if ($this->getParameter('kernel.debug')) {
             $error['traces'] = $exception->getTrace();
         }
-        $this->logger->error(__FUNCTION__, compact('exception', 'error'));
+        $this->logger->error(__METHOD__, compact('exception', 'error'));
+        if ($throw) {
+            throw $exception;
+        }
         return $this->json($error, $exception->getCode() ?: Response::HTTP_INTERNAL_SERVER_ERROR);
 
     }
