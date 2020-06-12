@@ -7,7 +7,7 @@ classes Traits for symfony
 
 
 List of trait
-###Trait for Entity
+### Trait for Entity
 * NameEntity
 * CommentEntity
 * DescriptionEntity
@@ -15,14 +15,14 @@ List of trait
 * CityEntityTrait
 * ZipEntity
 
-###Symfony Service Trait
+### Symfony Service Trait
 * EntityManagerTrait
 * LoggerTrait
 * SerializerTrait
 * SessionTrait
 * TranslatorTrait
 
-###Symfony Security Trait
+### Symfony Security Trait
 * NeedLogin (test function simulate login)
 
 
