@@ -3,32 +3,19 @@
 namespace Fardus\Traits\Symfony\Manager;
 
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Contracts\Service\Attribute\Required;
 
-/**
- * Trait EntityManagerTrait
- * @package Fardus\Traits\Symfony\Entity
- */
 trait EntityManagerTrait
 {
-    /**
-     * @var EntityManagerInterface
-     */
-    protected $entityManager;
+    protected EntityManagerInterface $entityManager;
 
-    /**
-     * @required
-     * @param EntityManagerInterface $entityManager
-     * @return static
-     */
-    public function setEntityManager( EntityManagerInterface $entityManager ): self
+    #[Required]
+    public function setEntityManager(EntityManagerInterface $entityManager): static
     {
         $this->entityManager = $entityManager;
         return $this;
     }
 
-    /**
-     * @return EntityManager
-     */
     public function getEntityManager(): EntityManagerInterface
     {
         return $this->entityManager;

@@ -2,26 +2,15 @@
 
 namespace Fardus\Traits\Symfony\Accessors;
 
-/**
- * trait EnableAccessorsTrait
- * @package Fardus\Traits\Symfony\Entity
- */
 trait EnableAccessorsTrait
 {
-    /**
-     * @param bool $enable
-     * @return static
-     */
-    public function setEnable(bool $enable ): self
+    public function setEnable(bool $enable): static
     {
         $this->enable = $enable;
         return $this;
     }
 
-    /**
-     * @return bool
-     */
-    public function getEnable() : bool
+    public function getEnable(): bool
     {
         return $this->enable;
     }

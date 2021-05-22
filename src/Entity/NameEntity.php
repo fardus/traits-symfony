@@ -6,10 +6,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use Fardus\Traits\Symfony\Accessors\NameAccessorsTrait;
 
-/**
- * trait NameEntity
- * @package Fardus\Traits\Symfony\Entity
- */
+/** @deprecated */
 trait NameEntity
 {
     use NameAccessorsTrait;

@@ -4,10 +4,7 @@ namespace Fardus\Traits\Symfony\Accessors;
 
 trait AddressAccessorsTrait
 {
-    /**
-     * @return static
-     */
-    public function setAddress( ?string $address ): self
+    public function setAddress(?string $address): static
     {
         $this->address = $address;
         return $this;

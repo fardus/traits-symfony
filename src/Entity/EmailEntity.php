@@ -3,11 +3,9 @@
 namespace Fardus\Traits\Symfony\Entity;
 
 use Fardus\Traits\Symfony\Accessors\EmailAccessorsTrait;
+use Doctrine\ORM\Mapping as ORM;
 
-/**
- * trait EmailEntity
- * @package Fardus\Traits\Symfony\Entity
- */
+/** @deprecated */
 trait EmailEntity
 {
     use EmailAccessorsTrait;

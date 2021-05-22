@@ -3,7 +3,9 @@
 namespace Fardus\Traits\Symfony\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\DocBlock\Tags\Deprecated;
 
+/** @deprecated */
 trait IdEntity
 {
     /**
@@ -18,10 +20,9 @@ trait IdEntity
         return $this->id;
     }
 
-    public function setId(int $id) : self
+    public function setId(int $id): self
     {
         $this->id = $id;
         return $this;
     }
-
 }

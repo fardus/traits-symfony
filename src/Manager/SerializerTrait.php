@@ -3,34 +3,20 @@
 namespace Fardus\Traits\Symfony\Manager;
 
 use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Contracts\Service\Attribute\Required;
 
-/**
- * Trait SerializerTrait
- * @package Fardus\Traits\Symfony\Entity
- */
 trait SerializerTrait
 {
+    protected SerializerInterface $serializer;
 
-    /**
-     * @var SerializerInterface
-     */
-    protected $serializer;
-
-    /**
-     * @required
-     * @param SerializerInterface $serializer
-     * @return static
-     */
-    public function setSerializer(SerializerInterface $serializer) : self
+    #[Required]
+    public function setSerializer(SerializerInterface $serializer): static
     {
         $this->serializer = $serializer;
         return $this;
     }
 
-    /**
-     * @return SerializerInterface
-     */
-    public function getSerializer() : SerializerInterface
+    public function getSerializer(): SerializerInterface
     {
         return $this->serializer;
     }

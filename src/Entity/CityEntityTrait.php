@@ -11,7 +11,6 @@ trait CityEntityTrait
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
-     * @var string|null
      */
-    protected $city = null;
+    protected ?string $city = null;
 }
