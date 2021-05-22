@@ -3,35 +3,16 @@
 namespace Fardus\Traits\Symfony\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Fardus\Traits\Symfony\Accessors\DescriptionAccessorsTrait;
 
-/**
- * trait DescriptionEntity
- * @package Fardus\Traits\Symfony\Entity
- */
+/** @deprecated */
 trait DescriptionEntity
 {
+    use DescriptionAccessorsTrait;
+
     /**
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      * @var string
      */
     protected $description;
-
-    /**
-     * @param string $description
-     * @return static
-     */
-    public function setDescription(?string $description )
-    {
-        $this->description = $description;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
 }

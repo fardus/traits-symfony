@@ -12,7 +12,7 @@ trait EmailAccessorsTrait
      * @param string $email
      * @return static
      */
-    public function setEmail( ?string $email ) : self
+    public function setEmail(?string $email): self
     {
         $this->email = $email;
         return $this;
@@ -21,9 +21,8 @@ trait EmailAccessorsTrait
     /**
      * @return string
      */
-    public function getEmail() : ?string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
-
 }

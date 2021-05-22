@@ -4,10 +4,7 @@ namespace Fardus\Traits\Symfony\Accessors;
 
 trait CityAccessorsTrait
 {
-    /**
-     * @return static
-     */
-    public function setCity( ?string $city ): self
+    public function setCity(?string $city): static
     {
         $this->city = $city;
         return $this;

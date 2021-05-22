@@ -3,32 +3,19 @@
 namespace Fardus\Traits\Symfony\Manager;
 
 use Psr\Log\LoggerInterface;
+use Symfony\Contracts\Service\Attribute\Required;
 
-/**
- * Trait EntityManagerTrait
- * @package Fardus\Traits\Symfony\Manager
- */
 trait LoggerTrait
 {
-    /**
-     * @var LoggerInterface
-     */
-    protected $logger;
+    protected LoggerInterface $logger;
 
-    /**
-     * @required
-     * @param LoggerInterface $logger
-     * @return static
-     */
-    public function setLogger( LoggerInterface $logger ): self
+    #[Required]
+    public function setLogger(LoggerInterface $logger): static
     {
         $this->logger = $logger;
         return $this;
     }
 
-    /**
-     * @return LoggerInterface
-     */
     public function getLogger(): LoggerInterface
     {
         return $this->logger;

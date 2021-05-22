@@ -11,7 +11,6 @@ trait AddressEntityTrait
 
     /**
      * @ORM\Column(type="string", nullable=true)
-     * @var string|null
      */
-    protected $address = null;
+    protected ?string $address = null;
 }

@@ -6,6 +6,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use Fardus\Traits\Symfony\Accessors\ZipAccessorsTrait;
 
+/** @deprecated */
 trait ZipEntity
 {
     use ZipAccessorsTrait;
@@ -14,5 +15,5 @@ trait ZipEntity
      * @ORM\Column(type="string", length=10, nullable=true)
      * @var string
      */
-    protected $zip;
+    protected $zip = null;
 }
