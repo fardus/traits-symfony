@@ -6,7 +6,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use Fardus\Traits\Symfony\Accessors\ZipAccessorsTrait;
 
-trait ZipEntity
+trait ZipEntityTrait
 {
     use ZipAccessorsTrait;
 
